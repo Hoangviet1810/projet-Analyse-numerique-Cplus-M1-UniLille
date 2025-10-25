@@ -176,7 +176,7 @@ int main(){
     string file_out = "BS_implicit.txt";
     vector<double> Ufinal = BS_implicite(X, L, T, sigma, N, h, k, u0, file_out);
 
-    cout << "Computed solution at final time T = " << T << " (written in " << file_out << ")\n";
+    cout << " Solution calculée au temps final T = " << T << " (Resultats sauvegardes dans " << file_out << ")\n";
     cout << "x   U(T,x)\n";
     for(size_t i=0;i<X.size();i++){
         cout << X[i] << "   " << Ufinal[i] << "\n";
