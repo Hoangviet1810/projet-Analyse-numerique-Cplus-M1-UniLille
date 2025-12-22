@@ -22,3 +22,11 @@ Les conditions initiales et aux bords sont définies, puis les schémas sont com
 
 Application des méthodes numériques au modèle de Black–Scholes en finance.
 Le projet comprend l’initialisation du problème, la construction d’une matrice bande, la mise en œuvre d’un algorithme de résolution simplifié, et la visualisation des résultats à l’aide de graphes 2D, 3D et de cartes thermiques (heat maps).
+
+## Méthodes itératives pour les matrices creuses : Application à la température optimale d’un four pour la cuisson d’un gâteau
+On étudie dans ce projet le champ de température d’un gâteau à cuire dans un four à partir
+de la valeur connue des résistences électriques. On suppose le phénomène stationnaire, c’est-à-dire
+indépendant du temps (c’est le cas quand le four est arrivé à la température imposée avec le gâteau
+à cuir déjà à l’intérieur du four). Le but du projet est la résolution par diverses méthodes itératives
+du système linéaire Ax = b qui provient de la discrétisation par différences finies des équations
+definissant notre problème
