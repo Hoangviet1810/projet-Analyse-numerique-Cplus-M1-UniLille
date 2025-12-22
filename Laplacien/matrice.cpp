@@ -9,20 +9,19 @@
 #include <cmath>
 using namespace std;
 
-// constructeur en donnant les dimensions
 matrice::matrice(int n, int m) {
     assert(n > 0 && m > 0);
     this->size1 = n; 
     this->size2 = m;
     this->matrix = new vector<double>[n];
-    vector<double> v(m,0.0);  // tạo vector tạm với kích thước m và giá trị 0.0
+    vector<double> v(m,0.0);  
     for (int i = 0; i < n; i++) {
-        this->matrix[i] = v;  // gán vector tạm cho mỗi hàng của ma trận
+        this->matrix[i] = v; 
     }
 }  
 
-// constructeur par copie Lille
-matrice::matrice(matrice const & mat) {   // đây là copy trực tiếp từ vecteur 
+// constructeur par copie
+matrice::matrice(matrice const & mat) {   
     assert((mat.size1 > 0) && (mat.size2 > 0));
     this->size1 = mat.size1;
     this->size2 = mat.size2;
@@ -39,37 +38,26 @@ matrice::~matrice(){
     this->size2 = 0;
 }
 
-// matrice::~matrice()
-// {
-//     cout << "Destruct matrice " << this << " matrix=" << matrix << endl;
-//     delete[] matrix;   // delete nullptr là an toàn
-//     matrix = nullptr;
-//     size1 = 0;
-//     size2 = 0;
-// }
-
 // Retour la ligne i
 vector<double>& matrice::operator[](int i){
     assert(i >= 0 && i < this->size1);
     return this->matrix[i];
 }
 
-// Phiên bản chỉ đọc
 const vector<double>& matrice::operator[](int i) const {
     assert(i >= 0 && i < this->size1);
-    return matrix[i];  // trả về vector dòng const
+    return matrix[i];  
 }
 
-// Phiên bản đọc/ghi
 double& matrice::operator()(int i, int j) {
     assert(i >= 0 && i < size1 && j >= 0 && j < size2);
-    return matrix[i][j];  // trả về phần tử tại (i,j)
+    return matrix[i][j]; 
 }
 
-// Phiên bản chỉ đọc
+
 const double& matrice::operator()(int i, int j) const {
     assert(i >= 0 && i < size1 && j >= 0 && j < size2);
-    return matrix[i][j];  // trả về giá trị (copy) tại (i,j)
+    return matrix[i][j];  
 }
 
 matrice& matrice::operator=(const matrice  &m){
@@ -102,9 +90,9 @@ matrice matrice::transpose(){
 }
 
 
-vector<double> matrice::colonne(int j) const{ // ở đây int j là chỉ số cột
+vector<double> matrice::colonne(int j) const{ 
     assert(j >= 0 && j < this->size2);
-    vector<double> col(this->size1);   // lấy size1 do nó phù hơp với số dòng
+    vector<double> col(this->size1);   
     for (int i = 0; i < this->size1; i++){
         col[i] = this->matrix[i][j];
     }
@@ -113,7 +101,7 @@ vector<double> matrice::colonne(int j) const{ // ở đây int j là chỉ số 
 
 vector<double> matrice::ligne(int i) const{
     assert(i >= 0 && i < this->size1);
-    vector<double> row(this->size2);   // lấy size2 do nó phù hơp với số cột
+    vector<double> row(this->size2);  
     for (int j = 0; j < this->size2; j++){
         row[j] = this->matrix[i][j];
     }
@@ -224,53 +212,44 @@ istream &operator>>(istream &i, matrice &mat){
 }
 
 void save_matrice(const string &filename, const matrice &mat){
-    ofstream file;   // mở file để ghi
+    ofstream file;   
     file.open(filename, ios::out);
     assert(!file.fail());
-    // ghi kích thước ma trận trước, ví dụ: "2 3"
+    
     file << mat.dim1() << " " << mat.dim2() << endl;
 
-    // ghi từng phần tử ma trận
+    
     for (int i = 0; i < mat.dim1(); i++){
         for (int j = 0; j < mat.dim2(); j++){
-            file << mat[i][j] << " ";   // ghi các phần tử của hàng
+            file << mat[i][j] << " ";   
         }
-        file << endl;                   // xuống dòng sau mỗi hàng
+        file << endl;                 
     }
 
-    file.close();   // đóng file sau khi ghi xong
+    file.close();   
 }
 
 matrice read_matrice(const char* filename){
-    ifstream file(filename);   // mở file để đọc
+    ifstream file(filename);   
     assert(file.is_open());
 
     int rows, cols;
-    file >> rows >> cols;     // đọc kích thước ma trận
+    file >> rows >> cols;    
 
-    matrice mat(rows, cols);  // tạo ma trận với kích thước đã đọc
+    matrice mat(rows, cols);  
 
-    // đọc từng phần tử ma trận
     for (int i = 0; i < rows; i++){
         for (int j = 0; j < cols; j++){
-            file >> mat[i][j];   // đọc các phần tử của ma trận
+            file >> mat[i][j];  
         }
     }
 
-    file.close();   // đóng file sau khi đọc xong
-    return mat;     // trả về ma trận đã đọc
+    file.close();  
+    return mat;     
 }
 
-// matrice read_matrice(const char* filename){
-//     matrice A;
-//     ifstream fh(filename);
-//     fh >> A;
-//     return A;
-// }
-
-void matrice::resize(int n, int m)
-{
-    // giải phóng đúng cách
+void matrice::resize(int n, int m){
+   
     if (matrix != nullptr)
         delete[] matrix;
 
@@ -282,38 +261,3 @@ void matrice::resize(int n, int m)
     for (int i = 0; i < n; ++i)
         matrix[i].assign(m, 0.0);   
 }
-
-// matrice& matrice::operator=(const matrice& other)
-// {
-//     if (this == &other)
-//         return *this;
-
-//     delete[] matrix;
-
-//     size1 = other.size1;
-//     size2 = other.size2;
-
-//     if (other.matrix)
-//     {
-//         matrix = new std::vector<double>[size1];
-//         for (int i = 0; i < size1; ++i)
-//             matrix[i] = other.matrix[i];
-//     }
-//     else
-//         matrix = nullptr;
-
-//     return *this;
-// }
-
-// matrice::matrice(const matrice& other)
-//     : size1(other.size1), size2(other.size2)
-// {
-//     if (other.matrix)
-//     {
-//         matrix = new std::vector<double>[size1];
-//         for (int i = 0; i < size1; ++i)
-//             matrix[i] = other.matrix[i];
-//     }
-//     else
-//         matrix = nullptr;
-// }
