@@ -227,53 +227,6 @@ vector<double> smbr_rho(int n){
     return b;
 }
 
-// void matricebande::steepest_descent(const vector<double>& b,vector<double>& x,double tol,int& nb_iter,vector<double>& res_hist) const {
-//     int n = this->dim1();
-//     if ((int)b.size() != n || (int)x.size() != n)
-//         throw runtime_error("Erreur de dimension dans steepest_descent");
-//     // r0 = b - A x0
-//     vector<double> r = b - (*this) * x;
-//     double norm_r0 = 0.0;
-//     for (double v : r) norm_r0 += v * v;
-//     norm_r0 = sqrt(norm_r0);
-//     double norm_r = norm_r0;
-//     res_hist.clear();
-//     res_hist.push_back(1.0); // ||r0|| / ||r0||
-//     int kmax = 10 * n;
-//     nb_iter = 0;
-
-//     while (norm_r > tol * norm_r0 && nb_iter < kmax){
-//         // Ar = A r
-//         vector<double> Ar = (*this) * r;
-//         // calcul alpha_k
-//         double num = 0.0, den = 0.0;
-//         for (int i = 0; i < n; ++i) {
-//             num += r[i] * r[i];
-//             den += r[i] * Ar[i];
-//         }
-//         if (den <= 0.0)
-//             throw runtime_error("Matrice non définie positive");
-//         double alpha = num / den;
-//         // x_{k+1}
-//         for (int i = 0; i < n; ++i)
-//             x[i] += alpha * r[i];
-//         // r_{k+1}
-//         for (int i = 0; i < n; ++i)
-//             r[i] -= alpha * Ar[i];
-//         // norme du résidu
-//         norm_r = 0.0;
-//         for (double v : r) norm_r += v * v;
-//         norm_r = sqrt(norm_r);
-//         res_hist.push_back(norm_r / norm_r0);
-//         // test overflow
-//         if (norm_r >= norm_r0 / tol) {
-//             cerr << "OVERFLOW dans steepest_descent" << endl;
-//             break;
-//         }
-//         nb_iter++;
-//     }
-// }
-
 void matricebande::steepest_descent(const vector<double>& b,vector<double>& x,double tol,int& nb_iter,vector<double>& res_hist) const{
     int n = this->dim1();
     if ((int)b.size() != n || (int)x.size() != n)

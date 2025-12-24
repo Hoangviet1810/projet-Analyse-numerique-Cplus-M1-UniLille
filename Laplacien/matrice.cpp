@@ -9,6 +9,7 @@
 #include <cmath>
 using namespace std;
 
+// constructeur en donnant les dimensions
 matrice::matrice(int n, int m) {
     assert(n > 0 && m > 0);
     this->size1 = n; 
@@ -16,7 +17,7 @@ matrice::matrice(int n, int m) {
     this->matrix = new vector<double>[n];
     vector<double> v(m,0.0);  
     for (int i = 0; i < n; i++) {
-        this->matrix[i] = v; 
+        this->matrix[i] = v;  
     }
 }  
 
@@ -44,9 +45,10 @@ vector<double>& matrice::operator[](int i){
     return this->matrix[i];
 }
 
+
 const vector<double>& matrice::operator[](int i) const {
     assert(i >= 0 && i < this->size1);
-    return matrix[i];  
+    return matrix[i];
 }
 
 double& matrice::operator()(int i, int j) {
@@ -57,7 +59,7 @@ double& matrice::operator()(int i, int j) {
 
 const double& matrice::operator()(int i, int j) const {
     assert(i >= 0 && i < size1 && j >= 0 && j < size2);
-    return matrix[i][j];  
+    return matrix[i][j];  // trả về giá trị (copy) tại (i,j)
 }
 
 matrice& matrice::operator=(const matrice  &m){
@@ -92,7 +94,7 @@ matrice matrice::transpose(){
 
 vector<double> matrice::colonne(int j) const{ 
     assert(j >= 0 && j < this->size2);
-    vector<double> col(this->size1);   
+    vector<double> col(this->size1);  
     for (int i = 0; i < this->size1; i++){
         col[i] = this->matrix[i][j];
     }
@@ -101,7 +103,7 @@ vector<double> matrice::colonne(int j) const{
 
 vector<double> matrice::ligne(int i) const{
     assert(i >= 0 && i < this->size1);
-    vector<double> row(this->size2);  
+    vector<double> row(this->size2);   
     for (int j = 0; j < this->size2; j++){
         row[j] = this->matrix[i][j];
     }
@@ -218,12 +220,11 @@ void save_matrice(const string &filename, const matrice &mat){
     
     file << mat.dim1() << " " << mat.dim2() << endl;
 
-    
     for (int i = 0; i < mat.dim1(); i++){
         for (int j = 0; j < mat.dim2(); j++){
-            file << mat[i][j] << " ";   
+            file << mat[i][j] << " ";  
         }
-        file << endl;                 
+        file << endl;                   
     }
 
     file.close();   
@@ -234,22 +235,22 @@ matrice read_matrice(const char* filename){
     assert(file.is_open());
 
     int rows, cols;
-    file >> rows >> cols;    
+    file >> rows >> cols;     
 
     matrice mat(rows, cols);  
 
+   
     for (int i = 0; i < rows; i++){
         for (int j = 0; j < cols; j++){
-            file >> mat[i][j];  
+            file >> mat[i][j];   
         }
     }
 
-    file.close();  
-    return mat;     
+    file.close();   
+    return mat;    
 }
 
 void matrice::resize(int n, int m){
-   
     if (matrix != nullptr)
         delete[] matrix;
 
@@ -261,3 +262,4 @@ void matrice::resize(int n, int m){
     for (int i = 0; i < n; ++i)
         matrix[i].assign(m, 0.0);   
 }
+
