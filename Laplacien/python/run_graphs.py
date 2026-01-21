@@ -2,16 +2,6 @@ import subprocess
 import os
 import glob
 
-# scripts = ["graph.py", "graph2.py", "graph3.py", "graph4.py"]
-# processes = []
-
-# for s in scripts:
-#     p = subprocess.Popen(["python3", s])
-#     processes.append(p)
-
-# for p in processes:
-#     p.wait()
-
 # thư mục chứa run_graphs.py và các script .py
 python_dir = os.path.dirname(os.path.abspath(__file__))
 
