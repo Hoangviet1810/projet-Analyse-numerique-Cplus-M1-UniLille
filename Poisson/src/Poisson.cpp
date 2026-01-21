@@ -123,28 +123,28 @@ void verif_poisson(const mat_profil& A,const vector<T>& b,int N,double h, double
     }
 }
 
-int main() {
-    double alpha = 0.0;              
-    string fichier = "erreur.txt";
-    ofstream fout(fichier);
-    fout << "N \tErreur_max s\n";
-    fout.close();
-    // Tests pour différentes tailles de matrice
-    vector<int> Ns = {4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536};
-    for (int N : Ns) {
-        double h = 1.0 / N;
-        double c0 = 2.0/(h*h) + alpha;
-        double c1 = -1.0/(h*h);
+// int main() {
+//     double alpha = 0.0;              
+//     string fichier = "erreur.txt";
+//     ofstream fout(fichier);
+//     fout << "N \tErreur_max s\n";
+//     fout.close();
+//     // Tests pour différentes tailles de matrice
+//     vector<int> Ns = {4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536};
+//     for (int N : Ns) {
+//         double h = 1.0 / N;
+//         double c0 = 2.0/(h*h) + alpha;
+//         double c1 = -1.0/(h*h);
         
-        mat_profil A = matrice_1D_profil(N, c0, c1);
-        vector<double> b(N);
-        for (int i = 0; i < N; i++) {
-            double x_i = i*h;
-            b[i] = (4*M_PI*M_PI + alpha) * sin(2*M_PI*x_i);
-        }
-        cout << "Résolution pour N = " << N << endl;
-        verif_poisson(A,b, N,h, alpha, fichier);
-    }
-    cout << "\nRésultats sauvegardés dans : " << fichier << endl;
-    return 0; 
-}
+//         mat_profil A = matrice_1D_profil(N, c0, c1);
+//         vector<double> b(N);
+//         for (int i = 0; i < N; i++) {
+//             double x_i = i*h;
+//             b[i] = (4*M_PI*M_PI + alpha) * sin(2*M_PI*x_i);
+//         }
+//         cout << "Résolution pour N = " << N << endl;
+//         verif_poisson(A,b, N,h, alpha, fichier);
+//     }
+//     cout << "\nRésultats sauvegardés dans : " << fichier << endl;
+//     return 0; 
+// }
