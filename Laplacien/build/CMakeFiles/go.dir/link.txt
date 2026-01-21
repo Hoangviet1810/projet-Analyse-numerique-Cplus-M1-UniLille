@@ -1,0 +1,1 @@
+g++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/go.dir/src/main.cpp.o CMakeFiles/go.dir/src/matrice.cpp.o CMakeFiles/go.dir/src/matricebande.cpp.o -o go

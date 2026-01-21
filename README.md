@@ -29,4 +29,4 @@ de la valeur connue des résistences électriques. On suppose le phénomène sta
 indépendant du temps (c’est le cas quand le four est arrivé à la température imposée avec le gâteau
 à cuir déjà à l’intérieur du four). Le but du projet est la résolution par diverses méthodes itératives
 du système linéaire Ax = b qui provient de la discrétisation par différences finies des équations
-definissant notre problème
+definissant notre problème. Pour compiler tous les codes (y compris les graphs) il faut installer le cmake et créer le repo build avec le command cmake --build . --target run_all 
