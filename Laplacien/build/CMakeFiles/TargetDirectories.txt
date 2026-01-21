@@ -1,6 +1,0 @@
-/Users/nguyenduchoangviet/Documents/github/projet-Analyse-numerique-Cplus-M1-UniLille/Laplacien/build/CMakeFiles/go.dir
-/Users/nguyenduchoangviet/Documents/github/projet-Analyse-numerique-Cplus-M1-UniLille/Laplacien/build/CMakeFiles/go_pcg.dir
-/Users/nguyenduchoangviet/Documents/github/projet-Analyse-numerique-Cplus-M1-UniLille/Laplacien/build/CMakeFiles/go_inverse.dir
-/Users/nguyenduchoangviet/Documents/github/projet-Analyse-numerique-Cplus-M1-UniLille/Laplacien/build/CMakeFiles/run_all.dir
-/Users/nguyenduchoangviet/Documents/github/projet-Analyse-numerique-Cplus-M1-UniLille/Laplacien/build/CMakeFiles/edit_cache.dir
-/Users/nguyenduchoangviet/Documents/github/projet-Analyse-numerique-Cplus-M1-UniLille/Laplacien/build/CMakeFiles/rebuild_cache.dir

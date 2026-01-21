@@ -1,1 +1,0 @@
-g++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/go_inverse.dir/src/main_inverse.cpp.o CMakeFiles/go_inverse.dir/src/matrice.cpp.o CMakeFiles/go_inverse.dir/src/matricebande.cpp.o -o go_inverse
