@@ -28,6 +28,11 @@ add_executable(go_inverse
     ${COMMON_SOURCES}
 )
 
+# Executable 4 : Test pour tester les fonctions assemblageT, preconditionne et PCG de partie 3
+add_executable(go_test
+    src/test.cpp
+    ${COMMON_SOURCES}
+)
 # Recherche de l'interpréteur Python3
 find_package(Python3 COMPONENTS Interpreter REQUIRED)
 
@@ -38,5 +43,5 @@ add_custom_target(run_all
     COMMAND $<TARGET_FILE:go_inverse>
     COMMAND ${Python3_EXECUTABLE} ${CMAKE_SOURCE_DIR}/python/run_graphs.py
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/python
-    DEPENDS go go_pcg go_inverse
+    DEPENDS go go_pcg go_inverse go_test
 )
