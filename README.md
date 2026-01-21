@@ -7,6 +7,64 @@ Ce projet présente la mise en œuvre de différentes méthodes numériques en C
 
 Présentation des objectifs du projet et du cadre général de l’analyse numérique appliquée avec le langage C++.
 
+# Structure
+```text
+project/
+|-- .gitignore
+|-- Black-Scholes/
+|   └── src/
+|       |--Black_Scholes.cpp
+|       |--Black_Scholes.h
+|       |--main.cpp
+|       |--vecteur_template.h
+|   └── python/
+|       |--graph1.py
+|       |--graph2.py
+|       |--run_graphs.py
+|   CMakeLists.txt
+|
+|-- Laplacien/
+|   └── src/
+|       |--main_inverse.cpp
+|       |--main.cpp
+|       |--main2.cpp
+|       |--matrice.cpp
+|       |--matrice.h
+|       |--matricebande.cpp
+|       |--matricebande.h
+|       |--test
+|   └── python/
+|       |--graph.py
+|       |--graph1.py
+|       |--graph2.py
+|       |--graph3.py
+|       |--graph4.py
+|       |--run_graphs.py
+|   CMakeLists.txt
+|
+|-- Poisson/
+|   └── src/
+|       |--main.cpp
+|       |--Poisson.cpp
+|       |--Poisson.h
+|   └── python/
+|       |--graph1.py
+|       |--graph2.py
+|       |--run_graphs.py
+|   CMakeLists.txt
+|  
+|-- Schema_Numerique/
+|   └── src/
+|       |--main.cpp
+|       |--Schema_Numerique.cpp
+|       |--Schema_Numerique.h
+|   └── python/
+|       |--graph1.py
+|       |--graph2.py
+|       |--run_graphs.py
+|   CMakeLists.txt
+└── README.md
+
 ## Résolution du problème de Poisson 1D
 
 Implémentation de la méthode numérique pour résoudre l’équation de Poisson en une dimension.
