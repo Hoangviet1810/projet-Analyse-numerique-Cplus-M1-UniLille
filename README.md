@@ -10,7 +10,7 @@ Présentation des objectifs du projet et du cadre général de l’analyse numé
 
 - CMake version >= 3.10
 - Compilateur C++ compatible C++17 (ex : g++, clang++)
-- Git (pour cloner les dépendances via FetchContent)
+- Git 
 - Connexion Internet (pour récupérer les dépendances la première fois)
 
 Pour chaque répertoire, entrer et créer un dossier build et puis se placer dedans :
