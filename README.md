@@ -1,5 +1,4 @@
 # Projet Analyse numerique avec C++ M1-Université de Lille
-Projet : Analyse Numérique avec C++
 
 Ce projet présente la mise en œuvre de différentes méthodes numériques en C++ pour la résolution d’équations différentielles partielles classiques.
 
