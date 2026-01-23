@@ -1,6 +1,6 @@
 # Projet Analyse numerique avec C++ M1-Université de Lille
 
-Ce projet présente la mise en œuvre de différentes méthodes numériques en C++ pour la résolution d’équations différentielles partielles classiques.
+Ce projet présente la mise en œuvre de différentes méthodes numériques en C++ pour la résolution d’équations différentielles partielles classiques, avec discrétisation par différences finies et résolution de systèmes linéaires.
 
 ## Introduction
 
