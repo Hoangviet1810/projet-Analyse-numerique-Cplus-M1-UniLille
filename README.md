@@ -13,9 +13,8 @@ Présentation des objectifs du projet et du cadre général de l’analyse numé
 - Compilateur C++ compatible C++17 (ex : g++, clang++)
 - Git (pour cloner les dépendances via FetchContent)
 - Connexion Internet (pour récupérer les dépendances la première fois)
-- Connexion de VPN de l'Université de Strasbourg ( sinon on peut changer le link de d'autre chatbot IA (chatgpt, minsitral, deepseek, etc ) pour continuer.)
 
-1, Créer un dossier build et se placer dedans :
+Créer un dossier build et se placer dedans :
 ```bash
 mkdir build
 cd build
