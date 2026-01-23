@@ -7,6 +7,21 @@ Ce projet présente la mise en œuvre de différentes méthodes numériques en C
 
 Présentation des objectifs du projet et du cadre général de l’analyse numérique appliquée avec le langage C++.
 
+## Prérequis
+
+- CMake version >= 3.10
+- Compilateur C++ compatible C++17 (ex : g++, clang++)
+- Git (pour cloner les dépendances via FetchContent)
+- Connexion Internet (pour récupérer les dépendances la première fois)
+- Connexion de VPN de l'Université de Strasbourg ( sinon on peut changer le link de d'autre chatbot IA (chatgpt, minsitral, deepseek, etc ) pour continuer.)
+
+1, Créer un dossier build et se placer dedans :
+```bash
+mkdir build
+cd build
+cmake ..
+cmake --build . --target run_all 
+```
 
 ## Résolution du problème de Poisson 1D
 
@@ -30,7 +45,7 @@ de la valeur connue des résistences électriques. On suppose le phénomène sta
 indépendant du temps (c’est le cas quand le four est arrivé à la température imposée avec le gâteau
 à cuir déjà à l’intérieur du four). Le but du projet est la résolution par diverses méthodes itératives
 du système linéaire Ax = b qui provient de la discrétisation par différences finies des équations
-definissant notre problème. Pour compiler tous les codes (y compris les graphs) il faut installer le cmake et créer le repo build avec le command cmake --build . --target run_all 
+definissant notre problème.
 
 # Structure
 ```text
