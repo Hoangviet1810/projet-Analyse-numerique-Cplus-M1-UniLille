@@ -13,7 +13,7 @@ Présentation des objectifs du projet et du cadre général de l’analyse numé
 - Git (pour cloner les dépendances via FetchContent)
 - Connexion Internet (pour récupérer les dépendances la première fois)
 
-Créer un dossier build et se placer dedans :
+Pour chaque répertoire, entrer et créer un dossier build et puis se placer dedans :
 ```bash
 mkdir build
 cd build
