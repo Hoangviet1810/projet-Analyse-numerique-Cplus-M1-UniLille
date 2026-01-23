@@ -25,7 +25,8 @@ int main()
 {
     int N = 20;
     double tol = 1e-6;
-
+    
+    cout << endl;
     cout << "===== PROBLEME INVERSE : determination des resistances =====\n";
 
     matricebande B;

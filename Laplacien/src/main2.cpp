@@ -6,6 +6,7 @@ using namespace std;
 int main() {
     int N = 20;
     
+    cout << endl;
     // CAS (1.1) : rho = 1  --> Laplacien standard
     cout << "===== CAS (1.1) : rho = 1 =====\n";
     matricebande B;

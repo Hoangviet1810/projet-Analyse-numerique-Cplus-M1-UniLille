@@ -6,7 +6,8 @@ using namespace std;
 
 int main()
 {
-    int N = 3;   
+    int N = 3;  
+    cout << endl; 
     cout << "Test (1.8) : assemblage de A et Ax" << endl;
     cout << "N = " << N << endl;
 
