@@ -15,6 +15,7 @@ Ce projet présente la mise en œuvre de différentes méthodes numériques en C
 ## Introduction
 
 Présentation des objectifs du projet et du cadre général de l’analyse numérique appliquée avec le langage C++.
+Pour plus de détails, vous pouvez consulter le [fichier PDF](Project_Analyse_numerique_en_C__.pdf).
 
 ## Prérequis
 
