@@ -2,6 +2,17 @@
 
 Ce projet présente la mise en œuvre de différentes méthodes numériques en C++ pour la résolution d’équations différentielles partielles classiques, avec discrétisation par différences finies et résolution de systèmes linéaires.
 
+## Table des Matières
+
+- [Projet Analyse numérique avec C++ M1 - Université de Lille](#projet-analyse-numerique-avec-c-m1-université-de-lille)
+- [Introduction](#introduction)
+- [Prérequis](#prérequis)
+- [Résolution du problème de Poisson 1D](#résolution-du-problème-de-poisson-1d)
+- [Schémas numériques pour l’équation de la chaleur](#schémas-numériques-pour-l’équation-de-la-chaleur)
+- [Résolution de l’équation de Black–Scholes](#résolution-de-l’équation-de-black–scholes)
+- [Méthodes itératives pour les matrices creuses : Application à la température optimale d’un four pour la cuisson d’un gâteau](#méthodes-itératives-pour-les-matrices-creuses-application-à-la-température-optimale-d’un-four-pour-la-cuisson-d’un-gâteau)
+- [Structure](#structure)
+
 ## Introduction
 
 Présentation des objectifs du projet et du cadre général de l’analyse numérique appliquée avec le langage C++.
