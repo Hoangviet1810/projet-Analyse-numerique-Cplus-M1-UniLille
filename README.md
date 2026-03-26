@@ -61,6 +61,7 @@ $$
 - \frac{u_{i-1} - 2 u_i + u_{i+1}}{h^2} + \alpha u_i = f_i, & i = 1, \dots, N-1,\\
 u_0 = u_N.
 \end{cases}
+$$
 
 ## Schémas numériques pour l’équation de la chaleur
 
