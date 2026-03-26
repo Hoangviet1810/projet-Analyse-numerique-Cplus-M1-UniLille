@@ -42,7 +42,7 @@ Soit $\Omega = (0,1)$ et on cherche une fonction $u : \Omega \to \mathbb{R}$ tel
 
 $$
 \begin{cases}
-- u''(x) + \alpha u(x) = f(x), & \forall x \in \Omega,\\
+- u''(x) + \alpha u(x) = f(x), & \forall x \in \Omega, \\
 u(0) = u(1),
 \end{cases}
 \quad \alpha \ge 0, \ f \text{ donnée.}
@@ -51,15 +51,17 @@ $$
 Pour discrétiser le problème par la méthode des différences finies, on introduit un maillage de $N+1$ points équidistants, dont $N-1$ sont à l’intérieur de l’intervalle $(0,1)$ :
 
 $$
-0 = x_0 < x_1 < \cdots < x_{N-1} < x_N = 1, \quad h = \frac{1}{N}, \quad x_i = i h, \quad i = 0, \dots, N.
+0 = x_0 < x_1 < \cdots < x_{N-1} < x_N = 1, \quad
+h = \frac{1}{N}, \quad
+x_i = i h, \quad i = 0, \dots, N.
 $$
 
 On note $u_i \approx u(x_i)$. Le système linéaire obtenu est :
 
 $$
 \begin{cases}
-- \frac{u_{i-1} - 2 u_i + u_{i+1}}{h^2} + \alpha u_i = f_i, & i = 1, \dots, N-1,\\
-u_0 = u_N.
+- \frac{u_{i-1} - 2 u_i + u_{i+1}}{h^2} + \alpha u_i = f_i, & i = 1, \dots, N-1, \\
+u_0 = u_N
 \end{cases}
 $$
 
