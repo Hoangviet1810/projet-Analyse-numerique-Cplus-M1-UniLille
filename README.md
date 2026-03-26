@@ -4,7 +4,6 @@ Ce projet présente la mise en œuvre de différentes méthodes numériques en C
 
 ## Table des Matières
 
-- [Projet Analyse numérique avec C++ M1 - Université de Lille](#projet-analyse-numerique-avec-c-m1-université-de-lille)
 - [Introduction](#introduction)
 - [Prérequis](#prérequis)
 - [Résolution du problème de Poisson 1D](#résolution-du-problème-de-poisson-1d)
