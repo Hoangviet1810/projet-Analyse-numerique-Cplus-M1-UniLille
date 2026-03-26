@@ -35,10 +35,7 @@ cmake --build . --target run_all
 
 Implémentation de la méthode numérique pour résoudre l’équation de Poisson en une dimension.
 Le projet aborde la représentation des matrices sous forme profil, la factorisation LDLᵗ et la résolution du système associé.
-Des tests numériques et des graphiques sont réalisés pour vérifier la précision des résultats. Nous avons étudié expérimentalement le taux de convergence β en traçant le nuage de points (log(N), log(εN)) et en calculant la droite de régression.
-
-![Graph log-log pour β](https://i.imgur.com/PBuKOnz.png)
-*Graphique log-log montrant la convergence avec la droite de régression permettant de déterminer β.*
+Des tests numériques et des graphiques sont réalisés pour vérifier la précision des résultats. 
 
 ## Schémas numériques pour l’équation de la chaleur
 
